@@ -1,0 +1,45 @@
+﻿@model IEnumerable<dormitory.Floor>
+
+@{
+    ViewData["Title"] = "Поверхи";
+}
+
+<h1>Поверхи в гуртожитку @ViewBag.NameDormitory</h1>
+<p>
+    @Html.ActionLink("Додати нову книгу","Create",new{NameDormitory= @ViewBag.NameDormitory})
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NumberFlor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Info)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                 @Html.DisplayFor(modelItem => item.NumberFlor)
+            </td>
+            <td>
+                    @if (item.Info!=null && item.Info.Length > 20)
+                    {
+                        @:...
+                    }
+                    else @Html.DisplayFor(modelItem => item.Info)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.NumberFlor,NameDormitory=item.NameDormitory }) |
+                @Html.ActionLink("Details", "Details", new { id=item.NumberFlor,NameDormitory=item.NameDormitory }) |
+                @Html.ActionLink("Delete", "Delete",new{ id=item.NumberFlor,NameDormitory=item.NameDormitory}) |
+                @Html.ActionLink("Block", "Block",new{ id=item.NumberFlor,NameDormitory=item.NameDormitory}) |
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

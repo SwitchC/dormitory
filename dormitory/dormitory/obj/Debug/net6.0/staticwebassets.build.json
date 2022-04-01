@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "G6De1hpev0kXSrtZIgHa4nD5+oBdMCaUpoZOHfMoRG4=",
+  "Hash": "vXM2sHkzLh3+MpWRoxWwTl3OHyVU4xAHDNkCKtf8/BQ=",
   "Source": "dormitory",
   "BasePath": "_content/dormitory",
   "Mode": "Default",
@@ -1069,6 +1069,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "D:\\dormitory\\dormitory\\wwwroot\\LoginForm.css",
+      "SourceId": "dormitory",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\dormitory\\dormitory\\wwwroot\\",
+      "BasePath": "_content/dormitory",
+      "RelativePath": "LoginForm.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\LoginForm.css"
+    },
+    {
+      "Identity": "D:\\dormitory\\dormitory\\wwwroot\\LoginForm.html",
+      "SourceId": "dormitory",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\dormitory\\dormitory\\wwwroot\\",
+      "BasePath": "_content/dormitory",
+      "RelativePath": "LoginForm.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\LoginForm.html"
     }
   ]
 }

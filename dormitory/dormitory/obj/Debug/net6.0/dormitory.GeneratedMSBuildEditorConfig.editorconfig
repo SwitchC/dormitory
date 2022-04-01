@@ -15,6 +15,90 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes = true
 build_property.MSBuildProjectDirectory = D:\dormitory\dormitory
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/dormitory/dormitory/Views/Blocks/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvY2tzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/dormitory/dormitory/Views/Blocks/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvY2tzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/dormitory/dormitory/Views/Blocks/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvY2tzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/dormitory/dormitory/Views/Blocks/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvY2tzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/dormitory/dormitory/Views/Blocks/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvY2tzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/dormitory/dormitory/Views/Blocks/IndexI.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvY2tzXEluZGV4SS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/dormitory/dormitory/Views/Dormitories/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9ybWl0b3JpZXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/dormitory/dormitory/Views/Dormitories/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9ybWl0b3JpZXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/dormitory/dormitory/Views/Dormitories/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9ybWl0b3JpZXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/dormitory/dormitory/Views/Dormitories/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9ybWl0b3JpZXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/dormitory/dormitory/Views/Dormitories/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9ybWl0b3JpZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/dormitory/dormitory/Views/Employees/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/dormitory/dormitory/Views/Employees/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/dormitory/dormitory/Views/Employees/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/dormitory/dormitory/Views/Employees/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/dormitory/dormitory/Views/Employees/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/dormitory/dormitory/Views/Floors/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmxvb3JzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/dormitory/dormitory/Views/Floors/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmxvb3JzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/dormitory/dormitory/Views/Floors/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmxvb3JzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/dormitory/dormitory/Views/Floors/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmxvb3JzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/dormitory/dormitory/Views/Floors/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmxvb3JzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/dormitory/dormitory/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
