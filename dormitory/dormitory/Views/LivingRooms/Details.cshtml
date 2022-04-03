@@ -1,0 +1,60 @@
+﻿@model dormitory.RL
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>LivingRoom</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Room.Number)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Room.Number)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LivingRoom.Cost)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LivingRoom.Cost)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model =>model.LivingRoom.Capacity)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LivingRoom.Capacity)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LivingRoom.NameDormitory)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LivingRoom.NameDormitory)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LivingRoom.NumberBlock)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LivingRoom.NumberBlock)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Room.Info)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Room.Info)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Room.Area)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Room.Area)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new{NumberRoom=Model.LivingRoom.NumberRoom,NameDormitory=Model.LivingRoom.NameDormitory}) |
+    @Html.ActionLink("Повернутись назад","Index",new{NumberBlock=Model.LivingRoom.NumberBlock,NameDormitory=Model.LivingRoom.NameDormitory})
+</div>

@@ -1,5 +1,4 @@
-﻿#nullable disable
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -22,34 +21,33 @@ namespace dormitory.Controllers
         }
 
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int NumberFloor,string NameDormitory)
         {
-            var dormitoryContext = _context.Bloсks;
+            ViewBag.NumberFloor = NumberFloor;
+            ViewBag.NameDormitory = NameDormitory;
+            var dormitoryContext = _context.Bloсks.Where(x=>x.NumberFloor==NumberFloor && x.NameDormitory==NameDormitory);
             return View(await dormitoryContext.ToListAsync());
         }
         // GET: Bloсk/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> Details(int Number,string NameDormitory,int NumberFloor)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
             var bloсk = await _context.Bloсks
-                .Include(b => b.N)
-                .FirstOrDefaultAsync(m => m.Number == id);
+                .FirstOrDefaultAsync(m => m.NumberFloor == NumberFloor && m.NameDormitory==NameDormitory && m.Number==Number);
             if (bloсk == null)
             {
                 return NotFound();
             }
-
             return View(bloсk);
         }
-
-        // GET: Bloсk/Create
-        public IActionResult Create()
+        public IActionResult LivingRooms(int NumberBlock,string NameDormitory,int NumberFloor)
         {
-            ViewData["NumberFloor"] = new SelectList(_context.Floors, "NumberFlor", "NameDormitory");
+            return RedirectToAction("Index", "LivingRooms", new {NumberBlock=NumberBlock,NameDormitory=NameDormitory});
+        }
+        // GET: Bloсk/Create
+        public IActionResult Create(int NumberFloor,string NameDormitory)
+        {
+            ViewBag.NumberFloor = NumberFloor;
+            ViewBag.NameDormitory = NameDormitory;
             return View();
         }
 
@@ -58,27 +56,23 @@ namespace dormitory.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Number,Electricity,NumberFloor,NameDormitory")] Bloсk bloсk)
+        public async Task<IActionResult> Create(int NumberFloor,string NameDormitory,[Bind("Number,Electricity,NumberFloor,NameDormitory")] Bloсk bloсk)
         {
+            bloсk.NumberFloor = NumberFloor;
+            bloсk.NameDormitory=NameDormitory;
             if (ModelState.IsValid)
             {
                 _context.Add(bloсk);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Index", "Blocks", new { NumberFloor =NumberFloor, NameDormitory = NameDormitory });
             }
-            ViewData["NumberFloor"] = new SelectList(_context.Floors, "NumberFlor", "NameDormitory", bloсk.NumberFloor);
-            return View(bloсk);
+            return RedirectToAction("Index", "Blocks", new { NumberFloor = NumberFloor, NameDormitory = NameDormitory });
         }
 
         // GET: Bloсk/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        public async Task<IActionResult> Edit(int Number,string NameDormitory,int NumberFloor)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var bloсk = await _context.Bloсks.FindAsync(id);
+            var bloсk = await _context.Bloсks.FirstOrDefaultAsync(x=>x.Number==Number && x.NameDormitory==NameDormitory && x.NumberFloor==NumberFloor);
             if (bloсk == null)
             {
                 return NotFound();
@@ -92,13 +86,9 @@ namespace dormitory.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Number,Electricity,NumberFloor,NameDormitory")] Bloсk bloсk)
+        public async Task<IActionResult> Edit(int Number,string NameDormitory,int NumberFloor, [Bind("Number,Electricity,NumberFloor,NameDormitory")] Bloсk bloсk)
         {
-            if (id != bloсk.Number)
-            {
-                return NotFound();
-            }
-
+            
             if (ModelState.IsValid)
             {
                 try
@@ -117,23 +107,17 @@ namespace dormitory.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Index", "Blocks", new { NumberFloor=NumberFloor, NameDormitory=NameDormitory });
             }
             ViewData["NumberFloor"] = new SelectList(_context.Floors, "NumberFlor", "NameDormitory", bloсk.NumberFloor);
-            return View(bloсk);
+            return RedirectToAction("Index", "Blocks", new { NumberFloor = NumberFloor, NameDormitory = NameDormitory });
         }
 
         // GET: Bloсk/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        public async Task<IActionResult> Delete(int Number,string NameDormitory,int NumberFloor)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
             var bloсk = await _context.Bloсks
-                .Include(b => b.N)
-                .FirstOrDefaultAsync(m => m.Number == id);
+                        .FirstOrDefaultAsync(m => m.Number ==Number&& m.NameDormitory==NameDormitory &&m.NumberFloor==NumberFloor);
             if (bloсk == null)
             {
                 return NotFound();
@@ -145,12 +129,12 @@ namespace dormitory.Controllers
         // POST: Bloсk/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        public async Task<IActionResult> DeleteConfirmed(int Number, string NameDormitory, int NumberFloor)
         {
-            var bloсk = await _context.Bloсks.FindAsync(id);
+            var bloсk = await _context.Bloсks.FirstOrDefaultAsync(m => m.Number == Number && m.NameDormitory == NameDormitory && m.NumberFloor == NumberFloor);
             _context.Bloсks.Remove(bloсk);
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction("Index", "Blocks", new { NumberFloor = NumberFloor, NameDormitory = NameDormitory });
         }
 
         private bool BloсkExists(int id)

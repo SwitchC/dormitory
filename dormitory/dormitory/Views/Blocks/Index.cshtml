@@ -7,7 +7,7 @@
 <h1>Index</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    @Html.ActionLink("Create", "Create", new { NumberFloor=ViewBag.NumberFloor,NameDormitory=ViewBag.NameDormitory })
 </p>
 <table class="table">
     <thead>
@@ -31,9 +31,10 @@
                 @Html.DisplayFor(modelItem => item.N.NameDormitory)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                @Html.ActionLink("Edit", "Edit", new { Number=item.Number,NameDormitory=item.NameDormitory,NumberFloor=item.NumberFloor }) |
+                @Html.ActionLink("Details", "Details", new { Number=item.Number,NameDormitory=item.NameDormitory,NumberFloor=item.NumberFloor }) |
+                @Html.ActionLink("Delete", "Delete", new { Number=item.Number,NameDormitory=item.NameDormitory,NumberFloor=item.NumberFloor }) | 
+                @Html.ActionLink("Living Rooms","LivingRooms",new { NumberBlock=item.Number,NameDormitory=item.NameDormitory,NumberFloor=item.NumberFloor })
             </td>
         </tr>
 }

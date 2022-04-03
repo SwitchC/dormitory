@@ -1,0 +1,71 @@
+﻿@model IEnumerable<dormitory.LivingRoom>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create" asp-route-NumberBlock=@ViewBag.NumberBlock asp-route-NameDormitory=@ViewBag.NameDormitory>Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NumberRoom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cost)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Capacity)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+            @if ((int) ViewData[item.NumberRoom.ToString()+"Students"] < item.Capacity)
+            {
+                <tr style="background:lime">
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NumberRoom)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Cost)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Capacity)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { NumberRoom=item.NumberRoom, NameDormitory=item.NameDormitory}) |
+                        @Html.ActionLink("Details", "Details", new { NumberRoom=item.NumberRoom, NameDormitory=item.NameDormitory}) |
+                        @Html.ActionLink("Delete", "Delete", new { NumberRoom=item.NumberRoom, NameDormitory=item.NameDormitory}) | 
+                        @Html.ActionLink("Students", "Students", new { NumberRoom=item.NumberRoom, NameDormitory=item.NameDormitory})
+                    </td>
+                </tr>
+            }
+            else
+            {
+                <tr >
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NumberRoom)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Cost)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Capacity)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { NumberRoom=item.NumberRoom, NameDormitory=item.NameDormitory}) |
+                        @Html.ActionLink("Details", "Details", new { NumberRoom=item.NumberRoom, NameDormitory=item.NameDormitory}) |
+                        @Html.ActionLink("Delete", "Delete", new { NumberRoom=item.NumberRoom, NameDormitory=item.NameDormitory}) | 
+                        @Html.ActionLink("Students", "Students", new { NumberRoom=item.NumberRoom, NameDormitory=item.NameDormitory})
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

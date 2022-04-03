@@ -50,7 +50,7 @@ namespace dormitory.Controllers
 
         public IActionResult Block(int id, string NameDormitory)
         {
-            return RedirectToAction("Index", "Blocks");
+            return RedirectToAction("Index", "Blocks", new {NumberFloor=id,NameDormitory=NameDormitory });
         }
         // GET: Floors/Create
         public IActionResult Create(string NameDormitory)

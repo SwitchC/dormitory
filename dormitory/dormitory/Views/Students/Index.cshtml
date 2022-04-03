@@ -1,0 +1,171 @@
+﻿@model IEnumerable<dormitory.Student>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create" asp-route-NumberRoom=@ViewBag.NumberRoom asp-route-NameDormitory=@ViewBag.NameDormitory>Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Faculty)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PhoneNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Course)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Balance)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Password)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.N)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+            if ((int)ViewData[item.Id.ToString()] > 0 && item.Balance < 0)
+            {
+                <tr style="background-color:#009fd4">
+                    <td style="color:#b22222">
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td style="color:#b22222">
+                        @Html.DisplayFor(modelItem => item.Faculty)
+                    </td>
+                    <td style="color:#b22222">
+                        @Html.DisplayFor(modelItem => item.PhoneNumber)
+                    </td>
+                   <td style="color:#b22222">
+                        @Html.DisplayFor(modelItem => item.Course)
+                    </td>
+                    <td style="color:#b22222">
+                        @Html.DisplayFor(modelItem => item.Balance)
+                    </td>
+                    <td style="color:#b22222">
+                        @Html.DisplayFor(modelItem => item.Password)
+                    </td>
+                    <td style="color:#b22222">
+                        @Html.DisplayFor(modelItem => item.N.NameDormitory)
+                    </td>
+                    <td style="color:#b22222">
+                        <a asp-action="Edit" asp-route-id="@item.Id" style="color:#b22222">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.Id" style="color:#b22222">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.Id" style="color:#b22222">Delete</a> | 
+                        <a asp-action="Strike" asp-route-id="@item.Id" style="color:#b22222">Strike</a>
+                    </td>
+                </tr>
+            }
+            else if ((int)ViewData[item.Id.ToString()] > 0)
+            {
+                <tr style="color:#b22222">
+                    <td >
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Faculty)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PhoneNumber)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Course)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Balance)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Password)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.N.NameDormitory)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Id" style="color:#b22222">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.Id" style="color:#b22222">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.Id" style="color:#b22222">Delete</a>
+                        <a asp-action="Strike" asp-route-id="@item.Id" style="color:#b22222">Strike</a>
+                    </td>
+                </tr>
+            }
+            else if (item.Balance < 0)
+            {
+                <tr style="Background:#009fd4">
+                    <td >
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Faculty)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PhoneNumber)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Course)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Balance)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Password)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.N.NameDormitory)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Id" style="color:black">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.Id" style="color:black">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.Id" style="color:black">Delete</a>
+                        <a asp-action="Strike" asp-route-id="@item.Id" style="color:black">Strike</a>
+                    </td>
+                </tr>
+            }
+            else
+            {
+                <tr>
+                    <td >
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Faculty)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PhoneNumber)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Course)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Balance)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Password)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.N.NameDormitory)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                        <a asp-action="Strike" asp-route-id="@item.Id">Strike</a>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

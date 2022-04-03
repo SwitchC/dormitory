@@ -6,7 +6,7 @@
 
 <h1>Поверхи в гуртожитку @ViewBag.NameDormitory</h1>
 <p>
-    @Html.ActionLink("Додати нову книгу","Create",new{NameDormitory= @ViewBag.NameDormitory})
+    @Html.ActionLink("Додати","Create",new{NameDormitory= @ViewBag.NameDormitory})
 </p>
 <table class="table">
     <thead>
@@ -37,7 +37,7 @@
                 @Html.ActionLink("Edit", "Edit", new { id=item.NumberFlor,NameDormitory=item.NameDormitory }) |
                 @Html.ActionLink("Details", "Details", new { id=item.NumberFlor,NameDormitory=item.NameDormitory }) |
                 @Html.ActionLink("Delete", "Delete",new{ id=item.NumberFlor,NameDormitory=item.NameDormitory}) |
-                @Html.ActionLink("Block", "Block",new{ id=item.NumberFlor,NameDormitory=item.NameDormitory}) |
+                @Html.ActionLink("Block", "Block",new{ id=item.NumberFlor,NameDormitory=item.NameDormitory})
             </td>
         </tr>
 }

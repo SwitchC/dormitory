@@ -22,14 +22,8 @@
                 <input asp-for="Electricity" class="form-control" />
                 <span asp-validation-for="Electricity" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="NumberFloor" class="control-label"></label>
-                <select asp-for="NumberFloor" class ="form-control" asp-items="ViewBag.NumberFloor"></select>
-            </div>
-            <div class="form-group">
-                <label asp-for="NameDormitory" class="control-label"></label>
-                <select asp-for="NameDormitory" class ="form-control" asp-items="ViewBag.NameDormitory"></select>
-            </div>
+            <input type="hidden" value="@ViewBag.NameDormitory" name="NameDormitory">
+            <input type="hidden" value="@ViewBag.NumberFloor" name="numberFloor">
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>

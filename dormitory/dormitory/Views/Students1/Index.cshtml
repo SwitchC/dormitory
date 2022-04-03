@@ -1,0 +1,67 @@
+﻿@model dormitory.Student
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Faculty)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PhoneNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Course)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Balance)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Password)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.N)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => Model.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.Faculty)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.PhoneNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.Course)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.Balance)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.Password)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.N.NameDormitory)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@Model.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@Model.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

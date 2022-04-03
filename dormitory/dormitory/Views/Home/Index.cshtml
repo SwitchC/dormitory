@@ -4,4 +4,6 @@
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
+    @if(ViewBag.User=="employee") @Html.ActionLink("Index","Dormitories")
+    else @Html.ActionLink("Index","Students1",new{id=ViewBag.id})
 </div>

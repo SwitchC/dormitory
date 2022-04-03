@@ -1,0 +1,50 @@
+﻿@model dormitory.RL
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>LivingRoom</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="LivingRoom.NumberRoom" />
+            <input type="hidden" asp-for="LivingRoom.NameDormitory" />
+            <input type="hidden" asp-for="LivingRoom.NumberBlock" />
+            <div class="form-group">
+                <label asp-for="LivingRoom.Cost" class="control-label"></label>
+                <input asp-for="LivingRoom.Cost" value=@((double)Model.LivingRoom.Cost) class="form-control" />
+                <span asp-validation-for="LivingRoom.Cost" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+               <label asp-for="Room.Info" class="control-label"></label>
+                <input value=@ViewBag.Info name="Info"class="form-control"/>
+                <span asp-validation-for="Room.Info" class="text-danger"></span>
+            </div>
+             <div class="form-group">
+                <label asp-for="Room.Area" class="control-label"></label>
+                <input value=@ViewBag.Area name="Area"class="form-control"/>
+                <span asp-validation-for="Room.Area" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LivingRoom.Capacity" class="control-label"></label>
+                <input asp-for="LivingRoom.Capacity" class="form-control" />
+                <span asp-validation-for="LivingRoom.Capacity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    @Html.ActionLink("Повернутись назад","Index",new{NumberBlock=Model.LivingRoom.NumberBlock,NameDormitory=Model.LivingRoom.NameDormitory});
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

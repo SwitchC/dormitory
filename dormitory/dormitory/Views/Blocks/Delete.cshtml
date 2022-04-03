@@ -28,7 +28,8 @@
     <form asp-action="Delete">
         <input type="hidden" asp-for="Number" />
         <input type="hidden" asp-for="NameDormitory" />
+        <input type="hidden" asp-for="NumberFloor" />
         <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-action="Index">Back to List</a>
     </form>
+    @Html.ActionLink("Back to list", "Index", new {NumberFloor=Model.NumberFloor,NameDormitory=Model.NameDormitory })
 </div>

@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
 using System.Diagnostics;
-
+using System.Security.Claims;
 namespace dormitory.Controllers
 {
     [Authorize( Roles="employee,student")]
@@ -16,9 +16,19 @@ namespace dormitory.Controllers
         }
         public IActionResult Index()
         {
+            ViewBag.id = Int32.Parse(HttpContext.User.Identity.Name); ;
+            ViewBag.User=HttpContext.User.Claims.FirstOrDefault(x=>x.Type==ClaimsIdentity.DefaultRoleClaimType).Value;
+
             return View();
         }
-
+        public IActionResult Dormitories()
+        {
+            return RedirectToAction("Index", "Dormitories");
+        }
+        public IActionResult Students1(int id)
+        {
+            return RedirectToAction("Index", "Students1", new {id=id });
+        }
         public IActionResult Privacy()
         {
             return View();

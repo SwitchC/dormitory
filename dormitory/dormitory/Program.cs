@@ -52,19 +52,18 @@ app.MapGet("/login", async(HttpContext context)=>
     context.Response.ContentType = "text/html; charset=utf-8";
     await context.Response.SendFileAsync("wwwroot/LoginForm.html");
 });
-
-app.MapPost("/login",async(string? returnUrl,HttpContext context,dormitoryContext _context)=>
+app.MapPost("/login",async(string returnUrl,HttpContext context,dormitoryContext _context)=>
 {
     var form = context.Request.Form;
-    if (!form.ContainsKey("id") || !form.ContainsKey("password"))
-        return Results.BadRequest("id або/і не встановлені");
+    if (!form.ContainsKey("id") || !form.ContainsKey("password") || !form.ContainsKey("idRole"))
+        return Results.BadRequest("Не встановлені значення");
     string id = form["id"];
     string password = form["password"];
-    Student? student = _context.Students.FirstOrDefault(s =>s.Id.ToString() ==id && s.Password == password);
-    Employee? employee = _context.Employees.FirstOrDefault(e => e.Id.ToString() == id && e.Pasword == password);
-    if (student is null && employee is null) return Results.Unauthorized();
-    if (employee != null)
+    string idRole = form["idRole"];
+    if (idRole=="e")
     {
+        Employee employee = _context.Employees.FirstOrDefault(e => e.Id.ToString() == id && e.Pasword == password);
+        if(employee ==null) return Results.Unauthorized();
         var claims = new List<Claim>
         {
         new Claim(ClaimsIdentity.DefaultNameClaimType, employee.Id.ToString()),
@@ -74,8 +73,10 @@ app.MapPost("/login",async(string? returnUrl,HttpContext context,dormitoryContex
         var claimsPrincipal = new ClaimsPrincipal(claimsIdentidy);
         await context.SignInAsync(claimsPrincipal);
     }
-    if (student != null)
+    if (idRole == "s")
     {
+        Student student = _context.Students.FirstOrDefault(s => s.Id.ToString() == id && s.Password == password);
+        if (student == null) return Results.Unauthorized();
         var claims = new List<Claim>
         {
         new Claim(ClaimsIdentity.DefaultNameClaimType, student.Id.ToString()),
@@ -92,9 +93,9 @@ app.MapGet("/logout", async (HttpContext context) =>
 {
     await context.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
 });
-
 app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Dormitories}/{action=Index}/{id?}");
+        name: "default",
+        pattern: "{controller=Home}/{action=Index}");
+
 
 app.Run();
