@@ -28,7 +28,7 @@
 @foreach (var item in Model) {
      @if (item.Id == @ViewBag.UserId)
      {
-        <tr style="background:aqua">
+        <tr style="background:#384b80">
             <td>
                 @Html.DisplayFor(modelItem => item.Name)
             </td>
@@ -39,9 +39,9 @@
                 @Html.DisplayFor(modelItem => item.Job)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                <a style="color:dark" asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a style="color:dark" asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a style="color:dark" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
             </td>
         </tr>
        }

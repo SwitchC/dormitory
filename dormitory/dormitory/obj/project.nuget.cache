@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "oJFK+5+uJYefUci2YAvD8zsSD5whH1ORNwBIbBZbGlOREN++o9ADB/AN8q+4vTC1D8Q6wJ3HEXePLW6MQjQ8iw==",
+  "dgSpecHash": "5GIYKQM/YSTFxoajBUXApL8hwmF7wKbmfP6rT4pSSICiOXXCFtBMCKFVqZpWrgbQYKcEOMC3mGuZLTmTV05h6Q==",
   "success": true,
-  "projectFilePath": "D:\\dormitory\\dormitory\\dormitory.csproj",
+  "projectFilePath": "D:\\git\\dormitory\\dormitory\\dormitory\\dormitory.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Веталь\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Веталь\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",

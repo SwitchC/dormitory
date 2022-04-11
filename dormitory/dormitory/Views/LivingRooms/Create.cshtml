@@ -17,7 +17,7 @@
             <div class="form-group">
                 <label asp-for="LivingRoom.NumberRoom" class="control-label"></label>
                 <input asp-for="LivingRoom.NumberRoom" class="form-control" />
-                <span asp-validation-for="LivingRoom.NumberRoom" class="text-danger"></span>
+                <span asp-validation-for="Room.Number" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="LivingRoom.Cost" class="control-label"></label>
@@ -47,7 +47,7 @@
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index" asp-route-NumberBlock=@ViewBag.NumberBlock asp-route-NameDormitory=@ViewBag.NameDormitory>Back to List</a>
 </div>
 
 @section Scripts {

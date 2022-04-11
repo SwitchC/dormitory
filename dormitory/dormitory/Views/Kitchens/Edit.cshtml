@@ -1,0 +1,53 @@
+﻿@model dormitory.KitchenRoom
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Kitchen</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Room.Number" />
+            <input type="hidden" asp-for="Room.NumberFloor" />
+            <input type="hidden" asp-for="Room.NameDormitory" />
+            <input type="hidden" asp-for="Kitchen.NameDormitory" />
+             <input type="hidden" asp-for="Kitchen.NumberRoom" />
+            <div class="form-group">
+                <label asp-for="Kitchen.NumberOfGasStoves" class="control-label"></label>
+                <input asp-for="Kitchen.NumberOfGasStoves" class="form-control" />
+                <span asp-validation-for="Kitchen.NumberOfGasStoves" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Kitchen.NumberOfSinks" class="control-label"></label>
+                <input asp-for="Kitchen.NumberOfSinks" class="form-control" />
+                <span asp-validation-for="Kitchen.NumberOfSinks" class="text-danger"></span>
+            </div>
+             <div class="form-group">
+               <label asp-for="Room.Info" class="control-label"></label>
+                <input value=@ViewBag.Info name="Info"class="form-control"/>
+                <span asp-validation-for="Room.Info" class="text-danger"></span>
+            </div>
+             <div class="form-group">
+                <label asp-for="Room.Area" class="control-label"></label>
+                <input value=@ViewBag.Area name="Area"class="form-control"/>
+                <span asp-validation-for="Room.Area" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index" asp-route-NumberFloor=@Model.Room.NumberFloor asp-route-NameDormitory=@Model.Room.NameDormitory>Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

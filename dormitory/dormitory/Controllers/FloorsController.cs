@@ -52,6 +52,15 @@ namespace dormitory.Controllers
         {
             return RedirectToAction("Index", "Blocks", new {NumberFloor=id,NameDormitory=NameDormitory });
         }
+
+        public IActionResult Kitchen(int id, string NameDormitory)
+        {
+            return RedirectToAction("Index", "Kitchens", new { NumberFloor = id, NameDormitory = NameDormitory });
+        }
+        public IActionResult LaundryRoom(int id, string NameDormitory)
+        {
+            return RedirectToAction("Index", "LaundryRooms", new { NumberFloor = id, NameDormitory = NameDormitory });
+        }
         // GET: Floors/Create
         public IActionResult Create(string NameDormitory)
         {

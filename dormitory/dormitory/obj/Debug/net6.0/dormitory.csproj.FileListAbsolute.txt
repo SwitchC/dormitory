@@ -381,7 +381,6 @@ D:\dormitory\dormitory\obj\Debug\net6.0\refint\dormitory.dll
 D:\dormitory\dormitory\obj\Debug\net6.0\dormitory.pdb
 D:\dormitory\dormitory\obj\Debug\net6.0\dormitory.genruntimeconfig.cache
 D:\dormitory\dormitory\obj\Debug\net6.0\ref\dormitory.dll
-D:\dormitory\dormitory\bin\Debug\net6.0\wwwroot\LoginForm.html
 D:\dormitory\dormitory\bin\Debug\net6.0\MessagePack.dll
 D:\dormitory\dormitory\bin\Debug\net6.0\MessagePack.Annotations.dll
 D:\dormitory\dormitory\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll

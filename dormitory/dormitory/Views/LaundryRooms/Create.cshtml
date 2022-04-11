@@ -1,0 +1,55 @@
+﻿@model dormitory.LR
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>LaundryRoom</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="LaundryRoom.NameDormitory" value=@ViewBag.NameDormitory/>
+            <input type="hidden"asp-for="Room.NumberFloor" name="NumberFloor" value=@ViewBag.NumberFloor/>
+            <div class="form-group">
+                <label asp-for="LaundryRoom.NumberRoom" class="control-label"></label>
+                <input asp-for="LaundryRoom.NumberRoom" class="form-control" />
+                <span asp-validation-for="Room.Number" class="text-danger"></span>
+            </div>
+             <div class="form-group">
+                <label asp-for="Room.Info" class="control-label"></label>
+                <input name="Info" class="form-control" />
+                <span asp-validation-for="Room.Info" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Room.Area" class="control-label"></label>
+                <input name="Area" class="form-control" />
+                <span asp-validation-for="Room.Area" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LaundryRoom.NumberOfDryer" class="control-label"></label>
+                <input asp-for="LaundryRoom.NumberOfDryer" class="form-control" />
+                <span asp-validation-for="LaundryRoom.NumberOfDryer" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LaundryRoom.NumberOfWashingMachine" class="control-label"></label>
+                <input asp-for="LaundryRoom.NumberOfWashingMachine" class="form-control" />
+                <span asp-validation-for="LaundryRoom.NumberOfWashingMachine" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+            </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index" asp-route-NumberFloor=@ViewBag.NumberFloor asp-route-NameDormitory=@ViewBag.NameDormitory>Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

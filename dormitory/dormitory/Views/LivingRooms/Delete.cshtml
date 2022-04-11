@@ -1,4 +1,4 @@
-﻿@model dormitory.LivingRoom
+﻿@model dormitory.RL
 
 @{
     ViewData["Title"] = "Delete";
@@ -12,35 +12,48 @@
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Cost)
+            @Html.DisplayNameFor(model => model.LivingRoom.NumberRoom)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Cost)
+            @Html.DisplayFor(model => model.LivingRoom.NumberRoom)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Capacity)
+            @Html.DisplayNameFor(model => model.LivingRoom.NameDormitory)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Capacity)
+            @Html.DisplayFor(model => model.LivingRoom.NameDormitory)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.N)
+            @Html.DisplayNameFor(model => model.LivingRoom.Cost)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.N.NameDormitory)
+            @Html.DisplayFor(model => model.LivingRoom.Cost)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.NNavigation)
+            @Html.DisplayNameFor(model => model.LivingRoom.Capacity)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.NNavigation.NameDormitory)
+            @Html.DisplayFor(model => model.LivingRoom.Capacity)
         </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Room.Area)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Room.Area)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Room.Info)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Room.Info)
+        </dd>
+        
     </dl>
     
     <form asp-action="Delete">
-        <input type="hidden" asp-for="NumberRoom" />
-        <input type="hidden" asp-for="NameDormitory" />
+        <input type="hidden" asp-for="LivingRoom.NumberRoom" />
+        <input type="hidden" asp-for="LivingRoom.NameDormitory" />
         <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-action="Index">Back to List</a>
+        <a asp-action="Index" asp-route-NumberBlock=@Model.LivingRoom.NumberBlock asp-route-NameDormitory=@Model.LivingRoom.NameDormitory>Back to List</a>
     </form>
 </div>

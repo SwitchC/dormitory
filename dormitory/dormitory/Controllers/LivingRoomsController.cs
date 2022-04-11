@@ -143,23 +143,22 @@ namespace dormitory.Controllers
         }
 
         // GET: LivingRooms/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        public async Task<IActionResult> Delete(int NumberRoom, string NameDormitory)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var livingRoom = await _context.LivingRooms
-                .Include(l => l.N)
-                .Include(l => l.NNavigation)
-                .FirstOrDefaultAsync(m => m.NumberRoom == id);
+            var livingRoom = await _context.LivingRooms.FirstOrDefaultAsync(m => m.NumberRoom == NumberRoom && m.NameDormitory==NameDormitory);
+            var room= await _context.Rooms.FirstOrDefaultAsync(m => m.Number == NumberRoom && m.NameDormitory == NameDormitory);
             if (livingRoom == null)
             {
                 return NotFound();
             }
-
-            return View(livingRoom);
+            if (room == null)
+            {
+                return NotFound();
+            }
+            RL rl=new RL();
+            rl.LivingRoom = livingRoom;
+            rl.Room=room;
+            return View(rl);
         }
 
         // POST: LivingRooms/Delete/5

@@ -1,0 +1,47 @@
+﻿@model IEnumerable<dormitory.LaundryRoom>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create" asp-route-NumberFloor=@ViewBag.NumberFloor  asp-route-NameDormitory=@ViewBag.NameDormitory >Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NumberOfWashingMachine)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumberOfDryer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.N)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumberOfWashingMachine)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumberOfDryer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.N.NameDormitory)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { NumberRoom=item.NumberRoom,NameDormitory=item.NameDormitory }) |
+                @Html.ActionLink("Details", "Details", new { NumberRoom=item.NumberRoom,NameDormitory=item.NameDormitory }) |
+                @Html.ActionLink("Delete", "Delete",  new { NumberRoom=item.NumberRoom,NameDormitory=item.NameDormitory })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

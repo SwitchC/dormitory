@@ -1,0 +1,47 @@
+﻿@model IEnumerable<dormitory.Kitchen>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create" asp-route-NumberFloor=@ViewBag.NumberFloor  asp-route-NameDormitory=@ViewBag.NameDormitory >Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NumberOfGasStoves)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumberOfSinks)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.N)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumberOfGasStoves)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumberOfSinks)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.N.NameDormitory)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { NumberRoom=item.NumberRoom,NameDormitory=item.NameDormitory }) |
+                @Html.ActionLink("Details", "Details", new { NumberRoom=item.NumberRoom,NameDormitory=item.NameDormitory }) |
+                @Html.ActionLink("Delete", "Delete",  new { NumberRoom=item.NumberRoom,NameDormitory=item.NameDormitory })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

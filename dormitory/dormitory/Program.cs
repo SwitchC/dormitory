@@ -50,7 +50,7 @@ app.MapGet("/accessdenied", async(HttpContext context)=>
 app.MapGet("/login", async(HttpContext context)=>
 {
     context.Response.ContentType = "text/html; charset=utf-8";
-    await context.Response.SendFileAsync("wwwroot/LoginForm.html");
+    await context.Response.SendFileAsync("Views/LoginForm/LoginForm.cshtml");
 });
 app.MapPost("/login",async(string returnUrl,HttpContext context,dormitoryContext _context)=>
 {
