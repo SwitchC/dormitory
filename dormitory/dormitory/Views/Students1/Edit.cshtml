@@ -13,15 +13,14 @@
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Id" />
+             <input type="hidden" asp-for="Balance" />
+              <input type="hidden" asp-for="NameDormitory" />
+              <input type="hidden" asp-for="NumberRoom" />
+              <input type="hidden" asp-for="Faculty" />
             <div class="form-group">
                 <label asp-for="Name" class="control-label"></label>
                 <input asp-for="Name" class="form-control" />
                 <span asp-validation-for="Name" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Faculty" class="control-label"></label>
-                <input asp-for="Faculty" class="form-control" />
-                <span asp-validation-for="Faculty" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="PhoneNumber" class="control-label"></label>
@@ -32,21 +31,6 @@
                 <label asp-for="Course" class="control-label"></label>
                 <input asp-for="Course" class="form-control" />
                 <span asp-validation-for="Course" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Balance" class="control-label"></label>
-                <input asp-for="Balance" class="form-control" />
-                <span asp-validation-for="Balance" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="NumberRoom" class="control-label"></label>
-                <select asp-for="NumberRoom" class="form-control" asp-items="ViewBag.NumberRoom"></select>
-                <span asp-validation-for="NumberRoom" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="NameDormitory" class="control-label"></label>
-                <select asp-for="NameDormitory" class="form-control" asp-items="ViewBag.NameDormitory"></select>
-                <span asp-validation-for="NameDormitory" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Password" class="control-label"></label>
@@ -61,7 +45,7 @@
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index" asp-route-id=@ViewBag.StudentId>Back to List</a>
 </div>
 
 @section Scripts {

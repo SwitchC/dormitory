@@ -553,3 +553,7 @@ D:\dormitory\dormitory\bin\Debug\net6.0\zh-Hans\Microsoft.CodeAnalysis.Workspace
 D:\dormitory\dormitory\bin\Debug\net6.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
 D:\dormitory\dormitory\bin\Debug\net6.0\runtimes\win-arm\lib\net6.0\dotnet-aspnet-codegenerator-design.exe
 D:\dormitory\dormitory\bin\Debug\net6.0\runtimes\win-arm64\lib\net6.0\dotnet-aspnet-codegenerator-design.exe
+D:\dormitory\dormitory\bin\Debug\net6.0\ClosedXML.dll
+D:\dormitory\dormitory\bin\Debug\net6.0\DocumentFormat.OpenXml.dll
+D:\dormitory\dormitory\bin\Debug\net6.0\ExcelNumberFormat.dll
+D:\dormitory\dormitory\bin\Debug\net6.0\System.IO.Packaging.dll

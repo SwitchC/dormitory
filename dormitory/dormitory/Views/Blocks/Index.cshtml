@@ -4,7 +4,7 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>Блоки</h1>
 
 <p>
     @Html.ActionLink("Create", "Create", new { NumberFloor=ViewBag.NumberFloor,NameDormitory=ViewBag.NameDormitory })
@@ -13,10 +13,10 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Electricity)
+                @Html.DisplayNameFor(model => model.Number)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.N)
+                @Html.DisplayNameFor(model => model.Electricity)
             </th>
             <th></th>
         </tr>
@@ -25,10 +25,10 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Electricity)
+                @Html.DisplayFor(modelItem => item.Number)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.N.NameDormitory)
+                @Html.DisplayFor(modelItem => item.Electricity)
             </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", new { Number=item.Number,NameDormitory=item.NameDormitory,NumberFloor=item.NumberFloor }) |

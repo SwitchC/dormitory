@@ -1,11 +1,5 @@
 ﻿@model dormitory.Student
-
-@{
-    ViewData["Title"] = "Index";
-}
-
-<h1>Index</h1>
-
+@{ViewData["Title"] = "Index";}
 <table class="table">
     <thead>
         <tr>
@@ -28,7 +22,7 @@
                 @Html.DisplayNameFor(model => model.Password)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.N)
+                @Html.DisplayNameFor(model => model.NameDormitory)
             </th>
             <th></th>
         </tr>
@@ -54,14 +48,13 @@
                 @Html.DisplayFor(modelItem => Model.Password)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => Model.N.NameDormitory)
+                @Html.DisplayFor(modelItem => Model.NameDormitory)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@Model.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@Model.Id">Delete</a>
+                <a asp-action="Details"  asp-route-id="@Model.Id">Details</a> |
+                <a asp-action="Strike"  asp-route-id="@Model.Id">Strike</a> 
             </td>
         </tr>
-}
     </tbody>
 </table>

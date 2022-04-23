@@ -40,3 +40,33 @@
     <a asp-action="Edit" asp-route-id="@Model?.Name">Редагувати</a> |
     <a asp-action="Index">Повернутись до списку</a>
 </div>
+<input type="hidden" value="/api/Chart/JsonDataF/@Model.Name" id="NameDormitory"/>
+ <h4>Статистика</h4>
+ <div class="container">
+    <div id="chart2"></div>
+</div>
+@section scripts{
+    <script type "text/javascript" src="https://www.gstatic.com/charts/loader.js">
+</script>
+<script>
+    google.charts.load('current', { 'packages': ['corechart'] });
+    google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+
+            $.get(document.getElementById('NameDormitory').value, function(JsonDataF) {
+                data = google.visualization.arrayToDataTable(JsonDataF,false);
+                var option = {
+                    title: "Співвідношення кількості студентів та факультетів",
+                    width: 500,
+                    height: 400,
+                    backgroundColor: '#222222',
+                    titleTextStyle: {color: 'white'},
+                    legendTextStyle: {color: 'white'}
+                };
+                chart = new google.visualization.PieChart(document.getElementById('chart2'));
+                chart.draw(data, option);
+            })
+        }
+    </script>
+}

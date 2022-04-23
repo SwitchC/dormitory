@@ -28,13 +28,8 @@ namespace dormitory.Controllers
         }
 
         // GET: Students1/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> Details(int id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
             var student = await _context.Students
                 .Include(s => s.N)
                 .FirstOrDefaultAsync(m => m.Id == id);
@@ -45,40 +40,16 @@ namespace dormitory.Controllers
 
             return View(student);
         }
-
-        // GET: Students1/Create
-        public IActionResult Create()
+        public async Task<IActionResult> Strike(int id)
         {
-            ViewData["NumberRoom"] = new SelectList(_context.LivingRooms, "NumberRoom", "NameDormitory");
-            return View();
+            ViewBag.StudentId = id;
+            var Strike = _context.Strikes.Where(x => x.StudentId == id);
+            return View(Strike);
         }
-
-        // POST: Students1/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Faculty,PhoneNumber,Course,Balance,NumberRoom,NameDormitory,Password")] Student student)
+        public async Task<IActionResult> Edit(int id)
         {
-            if (ModelState.IsValid)
-            {
-                _context.Add(student);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            ViewData["NumberRoom"] = new SelectList(_context.LivingRooms, "NumberRoom", "NameDormitory", student.NumberRoom);
-            return View(student);
-        }
-
-        // GET: Students1/Edit/5
-        public async Task<IActionResult> Edit(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var student = await _context.Students.FindAsync(id);
+            var student = await _context.Students.FirstOrDefaultAsync(x=>x.Id==id);
+            ViewBag.StudentId = id;
             if (student == null)
             {
                 return NotFound();
@@ -92,13 +63,8 @@ namespace dormitory.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Faculty,PhoneNumber,Course,Balance,NumberRoom,NameDormitory,Password")] Student student)
+        public async Task<IActionResult> Edit([Bind("Id,Name,Faculty,PhoneNumber,Course,Balance,NumberRoom,NameDormitory,Password")] Student student)
         {
-            if (id != student.Id)
-            {
-                return NotFound();
-            }
-
             if (ModelState.IsValid)
             {
                 try
@@ -117,42 +83,11 @@ namespace dormitory.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Index", "Students1", new {id=student.Id });
             }
             ViewData["NumberRoom"] = new SelectList(_context.LivingRooms, "NumberRoom", "NameDormitory", student.NumberRoom);
-            return View(student);
+            return  RedirectToAction("Index", "Student1", new { id = student.Id });
         }
-
-        // GET: Students1/Delete/5
-        public async Task<IActionResult> Delete(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var student = await _context.Students
-                .Include(s => s.N)
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (student == null)
-            {
-                return NotFound();
-            }
-
-            return View(student);
-        }
-
-        // POST: Students1/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
-            var student = await _context.Students.FindAsync(id);
-            _context.Students.Remove(student);
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
-        }
-
         private bool StudentExists(int id)
         {
             return _context.Students.Any(e => e.Id == id);

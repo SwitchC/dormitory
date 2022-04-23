@@ -86,16 +86,8 @@ namespace dormitory.Controllers
         }
 
         // GET: Floors/Edit/5
-        public async Task<IActionResult> Edit(int? id,string NameDormitory)
+        public async Task<IActionResult> Edit(int id,string NameDormitory)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-            if (NameDormitory == null)
-            {
-                return NotFound();
-            }
             var floor = await _context.Floors.FirstOrDefaultAsync(x=>x.NumberFlor==id && x.NameDormitory==NameDormitory);
             if (floor == null)
             {
@@ -110,16 +102,8 @@ namespace dormitory.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id,string NameDormitory, [Bind("NumberFlor,Info,NameDormitory")] Floor floor)
+        public async Task<IActionResult> Edit(string NameDormitory, [Bind("NumberFlor,Info,NameDormitory")] Floor floor)
         {
-            if (id != floor.NumberFlor)
-            {
-                return NotFound();
-            }
-            if (NameDormitory != floor.NameDormitory)
-            {
-                return NotFound();
-            }
             if (ModelState.IsValid)
             {
                 try
@@ -160,9 +144,9 @@ namespace dormitory.Controllers
         // POST: Floors/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id,string NameDormitory)
+        public async Task<IActionResult> DeleteConfirmed(int NumberFlor,string NameDormitory)
         {
-            var floor = await _context.Floors.FirstOrDefaultAsync(m=> m.NumberFlor==id && m.NameDormitory==NameDormitory);
+            var floor = await _context.Floors.FirstOrDefaultAsync(m=> m.NumberFlor==NumberFlor && m.NameDormitory==NameDormitory);
             _context.Floors.Remove(floor);
             await _context.SaveChangesAsync();
             return RedirectToAction("Index", "Floors", new {NameDormitory=NameDormitory});

@@ -23,6 +23,7 @@ namespace dormitory.Controllers
         // GET: Strikes
         public async Task<IActionResult> Index(int id)
         {
+            ViewBag.Id = id;
             var dormitoryContext = _context.Strikes.Where(x=>x.StudentId==id);
             return View(await dormitoryContext.ToListAsync());
         }
@@ -52,7 +53,7 @@ namespace dormitory.Controllers
         {
             ViewData["EmployeeId"] = new SelectList(_context.Employees, "Id", "Job");
             ViewData["StudentId"] = new SelectList(_context.Students, "Id", "Id");
-            ViewBag.Id = id;
+            ViewBag.StrikeId = id;
             return View();
         }
 
@@ -130,13 +131,8 @@ namespace dormitory.Controllers
         }
 
         // GET: Strikes/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        public async Task<IActionResult> Delete(int id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
             var strike = await _context.Strikes
                 .Include(s => s.Employee)
                 .Include(s => s.Student)
@@ -146,7 +142,7 @@ namespace dormitory.Controllers
                 return NotFound();
             }
 
-            return View(strike);
+            return RedirectToAction("Index", "Strikes", new { id = id });
         }
 
         // POST: Strikes/Delete/5

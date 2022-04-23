@@ -13,13 +13,13 @@
     <thead>
         <tr>
             <th>
+                @Html.DisplayNameFor(model => model.NumberRoom)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.NumberOfWashingMachine)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.NumberOfDryer)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.N)
             </th>
             <th></th>
         </tr>
@@ -28,13 +28,13 @@
 @foreach (var item in Model) {
         <tr>
             <td>
+                @Html.DisplayFor(modelItem => item.NameDormitory)
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.NumberOfWashingMachine)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.NumberOfDryer)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.N.NameDormitory)
             </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", new { NumberRoom=item.NumberRoom,NameDormitory=item.NameDormitory }) |

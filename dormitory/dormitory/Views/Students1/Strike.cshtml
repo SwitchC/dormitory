@@ -1,0 +1,54 @@
+﻿@model IEnumerable<dormitory.Strike>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<h1>Порушення</h1>
+@Html.ActionLink("Back","Index",new {id=ViewBag.StudentId})
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+             <th>
+                @Html.DisplayNameFor(model => model.Type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.State)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+            if (item.State == "неактивне")
+            {
+                <tr style="background-color:#384b80">
+                    <td style="color:black">
+                        @Html.DisplayFor(modelItem => item.Id)
+                    </td>
+                    <td style="color:black">
+                        @Html.DisplayFor(modelItem => item.Type)
+                    </td>
+                    <td style="color:black">
+                        @Html.DisplayFor(modelItem => item.State)
+                    </td>
+                </tr>
+            }
+            else
+            {
+              <tr>
+                  <td>
+                        @Html.DisplayFor(modelItem => item.Id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Type)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.State)
+                    </td>
+                </tr>   
+            }
+        }
+    </tbody>
+</table>

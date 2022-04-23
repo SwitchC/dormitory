@@ -5,7 +5,23 @@
 }
 
 <h1>Гуртожитки</h1>
-
+<div>
+    <h3>Оберіть exel-файл для завантаження</h3>
+    @using(Html.BeginForm("Import","Dormitories",FormMethod.Post,new{enctype="multipart/form-data",id="frm-excel"}))
+    {
+        <div>
+            Завантажте Excel-файл:
+            <input type="file" name="fileExcel" id="fileExcel"/>
+            <div>
+                <input type="submit" value="Завантажити"/>
+            </div>
+        </div>
+    }
+</div>
+<div>
+    <h3>Завантаження інформації в файл</h3>
+    <a asp-action="Export">Завантажити</a>
+</div>
 <p>
     <a asp-action="Create">Додати новий</a>
 </p>
@@ -65,3 +81,30 @@
 }
     </tbody>
 </table>
+<div class="container">
+    <div id="chart1"></div>
+</div>
+@section scripts{
+    <script type "text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script>
+    google.charts.load('current', { 'packages': ['corechart'] });
+    google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+
+            $.get('/api/Chart/JsonData', function(JsonData) {
+                data = google.visualization.arrayToDataTable(JsonData, false);
+                var option = {
+                    title: "Співвідношення кількості студентів та гуртожитків",
+                    width: 500,
+                    height: 400,
+                    backgroundColor: '#222222',
+                    titleTextStyle: {color: 'white'},
+                    legendTextStyle: {color: 'white'}
+                };
+                chart = new google.visualization.PieChart(document.getElementById('chart1'));
+                chart.draw(data, option);
+            })
+        }
+    </script>
+}

@@ -160,16 +160,15 @@ namespace dormitory.Controllers
             rl.Room=room;
             return View(rl);
         }
-
-        // POST: LivingRooms/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        public async Task<IActionResult> DeleteConfirmed(int NumberRoom, string NameDormitory)
         {
-            var livingRoom = await _context.LivingRooms.FindAsync(id);
+            var livingRoom = await _context.LivingRooms.FirstOrDefaultAsync(x=>x.NameDormitory==NameDormitory && x.NumberRoom==NumberRoom);
+            var room = await _context.Rooms.FirstOrDefaultAsync(x => x.Number == NumberRoom && x.NameDormitory == NameDormitory);
             _context.LivingRooms.Remove(livingRoom);
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            _context.Rooms.Remove(room);
+            await _context.SaveChangesAsync();
+            return RedirectToAction("Index", "LivingRooms", new { NumberBlock = livingRoom.NumberBlock, NameDormitory = livingRoom.NameDormitory });
         }
 
         private bool LivingRoomExists(int id)
@@ -180,7 +179,7 @@ namespace dormitory.Controllers
 }
 namespace dormitory
 {
-    public class RL
+    public partial class RL
     {
         public LivingRoom LivingRoom;
         public Room Room;

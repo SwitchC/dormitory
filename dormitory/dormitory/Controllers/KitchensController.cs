@@ -23,7 +23,7 @@ namespace dormitory.Controllers
         // GET: Kitchens
         public async Task<IActionResult> Index(int NumberFloor, string NameDormitory)
         {
-            var dormitoryContext = _context.Kitchens.Where(x=>_context.Rooms.FirstOrDefault(t=>t.Number==x.NumberRoom).NumberFloor==NumberFloor && x.NameDormitory==NameDormitory);
+            var dormitoryContext = _context.Kitchens.Where(x=>_context.Rooms.FirstOrDefault(t=>t.Number==x.NumberRoom && t.NameDormitory==NameDormitory).NumberFloor==NumberFloor && x.NameDormitory==NameDormitory);
             ViewBag.NumberFloor = NumberFloor;
             ViewBag.NameDormitory = NameDormitory;
             return View(await dormitoryContext.ToListAsync());

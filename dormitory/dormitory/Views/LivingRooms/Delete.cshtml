@@ -49,11 +49,6 @@
         </dd>
         
     </dl>
-    
-    <form asp-action="Delete">
-        <input type="hidden" asp-for="LivingRoom.NumberRoom" />
-        <input type="hidden" asp-for="LivingRoom.NameDormitory" />
-        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="DeleteConfirmed" asp-route-NumberRoom=@Model.LivingRoom.NumberRoom asp-route-NameDormitory=@Model.LivingRoom.NameDormitory>Delete</a>
         <a asp-action="Index" asp-route-NumberBlock=@Model.LivingRoom.NumberBlock asp-route-NameDormitory=@Model.LivingRoom.NameDormitory>Back to List</a>
-    </form>
 </div>

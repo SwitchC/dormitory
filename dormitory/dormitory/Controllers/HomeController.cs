@@ -29,7 +29,7 @@ namespace dormitory.Controllers
         {
             return RedirectToAction("Index", "Students1", new {id=id });
         }
-        public IActionResult Privacy()
+        public IActionResult Author()
         {
             return View();
         }

@@ -14,6 +14,7 @@ namespace dormitory
         [Required(ErrorMessage ="Поле не повинно бути порожнім")]
         [Display(Name ="Номер поверху")]
         public int NumberFlor { get; set; }
+        [Display(Name = "Інформація")]
         public string? Info { get; set; }
         [Required(ErrorMessage ="Поле не повинно бути прожнім")]
         [Display(Name ="Назва гуртожитку")]
