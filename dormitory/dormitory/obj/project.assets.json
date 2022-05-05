@@ -10010,11 +10010,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\dormitory\\dormitory\\dormitory.csproj",
+      "projectUniqueName": "D:\\git\\dormitory\\dormitory\\dormitory\\dormitory.csproj",
       "projectName": "dormitory",
-      "projectPath": "D:\\dormitory\\dormitory\\dormitory.csproj",
+      "projectPath": "D:\\git\\dormitory\\dormitory\\dormitory\\dormitory.csproj",
       "packagesPath": "C:\\Users\\Веталь\\.nuget\\packages\\",
-      "outputPath": "D:\\dormitory\\dormitory\\obj\\",
+      "outputPath": "D:\\git\\dormitory\\dormitory\\dormitory\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Веталь\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mvcvySK1xFu0P48QOkvpcQOfVH7/XT/jGaCgYJfJmDOgaDAYkaK8nhbuNZVs6XjrpYldn4Gn8NnPxppi1pfeMw==",
+  "dgSpecHash": "BqsiJXcHYWQXTuW+WW7y84jBx83LcJNa1RvUcpF9eev74yg4cxiex8Ax6q0sdoH+lERtnglwI9dwtHBfcvGShA==",
   "success": true,
-  "projectFilePath": "D:\\dormitory\\dormitory\\dormitory.csproj",
+  "projectFilePath": "D:\\git\\dormitory\\dormitory\\dormitory\\dormitory.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Веталь\\.nuget\\packages\\closedxml\\0.95.4\\closedxml.0.95.4.nupkg.sha512",
     "C:\\Users\\Веталь\\.nuget\\packages\\documentformat.openxml\\2.7.2\\documentformat.openxml.2.7.2.nupkg.sha512",

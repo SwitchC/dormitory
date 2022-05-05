@@ -8,237 +8,237 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = dormitory
 build_property.RootNamespace = dormitory
-build_property.ProjectDir = D:\dormitory\dormitory\
+build_property.ProjectDir = D:\git\dormitory\dormitory\dormitory\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = true
-build_property.MSBuildProjectDirectory = D:\dormitory\dormitory
+build_property.MSBuildProjectDirectory = D:\git\dormitory\dormitory\dormitory
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/dormitory/dormitory/Views/Blocks/Create.cshtml]
+[D:/git/dormitory/dormitory/dormitory/Views/Blocks/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvY2tzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/dormitory/dormitory/Views/Blocks/Delete.cshtml]
+[D:/git/dormitory/dormitory/dormitory/Views/Blocks/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvY2tzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/dormitory/dormitory/Views/Blocks/Details.cshtml]
+[D:/git/dormitory/dormitory/dormitory/Views/Blocks/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvY2tzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/dormitory/dormitory/Views/Blocks/Edit.cshtml]
+[D:/git/dormitory/dormitory/dormitory/Views/Blocks/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvY2tzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/dormitory/dormitory/Views/Blocks/Index.cshtml]
+[D:/git/dormitory/dormitory/dormitory/Views/Blocks/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvY2tzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/dormitory/dormitory/Views/Dormitories/Create.cshtml]
+[D:/git/dormitory/dormitory/dormitory/Views/Dormitories/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9ybWl0b3JpZXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/dormitory/dormitory/Views/Dormitories/Delete.cshtml]
+[D:/git/dormitory/dormitory/dormitory/Views/Dormitories/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9ybWl0b3JpZXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/dormitory/dormitory/Views/Dormitories/Details.cshtml]
+[D:/git/dormitory/dormitory/dormitory/Views/Dormitories/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9ybWl0b3JpZXNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/dormitory/dormitory/Views/Dormitories/Edit.cshtml]
+[D:/git/dormitory/dormitory/dormitory/Views/Dormitories/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9ybWl0b3JpZXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/dormitory/dormitory/Views/Dormitories/Index.cshtml]
+[D:/git/dormitory/dormitory/dormitory/Views/Dormitories/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9ybWl0b3JpZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/dormitory/dormitory/Views/Employees/Create.cshtml]
+[D:/git/dormitory/dormitory/dormitory/Views/Employees/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/dormitory/dormitory/Views/Employees/Delete.cshtml]
+[D:/git/dormitory/dormitory/dormitory/Views/Employees/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/dormitory/dormitory/Views/Employees/Details.cshtml]
+[D:/git/dormitory/dormitory/dormitory/Views/Employees/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/dormitory/dormitory/Views/Employees/Edit.cshtml]
+[D:/git/dormitory/dormitory/dormitory/Views/Employees/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/dormitory/dormitory/Views/Employees/Index.cshtml]
+[D:/git/dormitory/dormitory/dormitory/Views/Employees/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/dormitory/dormitory/Views/Floors/Create.cshtml]
+[D:/git/dormitory/dormitory/dormitory/Views/Floors/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmxvb3JzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/dormitory/dormitory/Views/Floors/Delete.cshtml]
+[D:/git/dormitory/dormitory/dormitory/Views/Floors/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmxvb3JzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/dormitory/dormitory/Views/Floors/Details.cshtml]
+[D:/git/dormitory/dormitory/dormitory/Views/Floors/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmxvb3JzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/dormitory/dormitory/Views/Floors/Edit.cshtml]
+[D:/git/dormitory/dormitory/dormitory/Views/Floors/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmxvb3JzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/dormitory/dormitory/Views/Floors/Index.cshtml]
+[D:/git/dormitory/dormitory/dormitory/Views/Floors/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmxvb3JzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/dormitory/dormitory/Views/Home/Author.cshtml]
+[D:/git/dormitory/dormitory/dormitory/Views/Home/Author.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBdXRob3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/dormitory/dormitory/Views/Home/Index.cshtml]
+[D:/git/dormitory/dormitory/dormitory/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/dormitory/dormitory/Views/Kitchens/Create.cshtml]
+[D:/git/dormitory/dormitory/dormitory/Views/Kitchens/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS2l0Y2hlbnNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/dormitory/dormitory/Views/Kitchens/Delete.cshtml]
+[D:/git/dormitory/dormitory/dormitory/Views/Kitchens/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS2l0Y2hlbnNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/dormitory/dormitory/Views/Kitchens/Details.cshtml]
+[D:/git/dormitory/dormitory/dormitory/Views/Kitchens/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS2l0Y2hlbnNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/dormitory/dormitory/Views/Kitchens/Edit.cshtml]
+[D:/git/dormitory/dormitory/dormitory/Views/Kitchens/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS2l0Y2hlbnNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/dormitory/dormitory/Views/Kitchens/Index.cshtml]
+[D:/git/dormitory/dormitory/dormitory/Views/Kitchens/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS2l0Y2hlbnNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/dormitory/dormitory/Views/LaundryRooms/Create.cshtml]
+[D:/git/dormitory/dormitory/dormitory/Views/LaundryRooms/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGF1bmRyeVJvb21zXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/dormitory/dormitory/Views/LaundryRooms/Delete.cshtml]
+[D:/git/dormitory/dormitory/dormitory/Views/LaundryRooms/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGF1bmRyeVJvb21zXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/dormitory/dormitory/Views/LaundryRooms/Details.cshtml]
+[D:/git/dormitory/dormitory/dormitory/Views/LaundryRooms/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGF1bmRyeVJvb21zXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/dormitory/dormitory/Views/LaundryRooms/Edit.cshtml]
+[D:/git/dormitory/dormitory/dormitory/Views/LaundryRooms/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGF1bmRyeVJvb21zXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/dormitory/dormitory/Views/LaundryRooms/Index.cshtml]
+[D:/git/dormitory/dormitory/dormitory/Views/LaundryRooms/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGF1bmRyeVJvb21zXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/dormitory/dormitory/Views/LivingRooms/Create.cshtml]
+[D:/git/dormitory/dormitory/dormitory/Views/LivingRooms/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGl2aW5nUm9vbXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/dormitory/dormitory/Views/LivingRooms/Delete.cshtml]
+[D:/git/dormitory/dormitory/dormitory/Views/LivingRooms/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGl2aW5nUm9vbXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/dormitory/dormitory/Views/LivingRooms/Details.cshtml]
+[D:/git/dormitory/dormitory/dormitory/Views/LivingRooms/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGl2aW5nUm9vbXNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/dormitory/dormitory/Views/LivingRooms/Edit.cshtml]
+[D:/git/dormitory/dormitory/dormitory/Views/LivingRooms/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGl2aW5nUm9vbXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/dormitory/dormitory/Views/LivingRooms/Index.cshtml]
+[D:/git/dormitory/dormitory/dormitory/Views/LivingRooms/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGl2aW5nUm9vbXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/dormitory/dormitory/Views/LoginForm/LoginForm.cshtml]
+[D:/git/dormitory/dormitory/dormitory/Views/LoginForm/LoginForm.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5Gb3JtXExvZ2luRm9ybS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/dormitory/dormitory/Views/Shared/Error.cshtml]
+[D:/git/dormitory/dormitory/dormitory/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/dormitory/dormitory/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/git/dormitory/dormitory/dormitory/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/dormitory/dormitory/Views/Strikes/Create.cshtml]
+[D:/git/dormitory/dormitory/dormitory/Views/Strikes/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RyaWtlc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/dormitory/dormitory/Views/Strikes/Delete.cshtml]
+[D:/git/dormitory/dormitory/dormitory/Views/Strikes/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RyaWtlc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/dormitory/dormitory/Views/Strikes/Details.cshtml]
+[D:/git/dormitory/dormitory/dormitory/Views/Strikes/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RyaWtlc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/dormitory/dormitory/Views/Strikes/Edit.cshtml]
+[D:/git/dormitory/dormitory/dormitory/Views/Strikes/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RyaWtlc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/dormitory/dormitory/Views/Strikes/Index.cshtml]
+[D:/git/dormitory/dormitory/dormitory/Views/Strikes/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RyaWtlc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/dormitory/dormitory/Views/Students1/Details.cshtml]
+[D:/git/dormitory/dormitory/dormitory/Views/Students1/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudHMxXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/dormitory/dormitory/Views/Students1/Edit.cshtml]
+[D:/git/dormitory/dormitory/dormitory/Views/Students1/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudHMxXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/dormitory/dormitory/Views/Students1/Index.cshtml]
+[D:/git/dormitory/dormitory/dormitory/Views/Students1/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudHMxXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/dormitory/dormitory/Views/Students1/Strike.cshtml]
+[D:/git/dormitory/dormitory/dormitory/Views/Students1/Strike.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudHMxXFN0cmlrZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/dormitory/dormitory/Views/Students/Create.cshtml]
+[D:/git/dormitory/dormitory/dormitory/Views/Students/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudHNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/dormitory/dormitory/Views/Students/Delete.cshtml]
+[D:/git/dormitory/dormitory/dormitory/Views/Students/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudHNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/dormitory/dormitory/Views/Students/Details.cshtml]
+[D:/git/dormitory/dormitory/dormitory/Views/Students/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudHNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/dormitory/dormitory/Views/Students/Edit.cshtml]
+[D:/git/dormitory/dormitory/dormitory/Views/Students/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudHNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/dormitory/dormitory/Views/Students/Index.cshtml]
+[D:/git/dormitory/dormitory/dormitory/Views/Students/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/dormitory/dormitory/Views/_ViewImports.cshtml]
+[D:/git/dormitory/dormitory/dormitory/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/dormitory/dormitory/Views/_ViewStart.cshtml]
+[D:/git/dormitory/dormitory/dormitory/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/dormitory/dormitory/Views/Shared/_Layout.cshtml]
+[D:/git/dormitory/dormitory/dormitory/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-tu0dl1rhmt
